@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Paradise | Your Premium Utility Hub</title>
+    <!-- Inter font for that modern SaaS look -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Aurora Background Blobs -->
+    <div class="aurora-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation / Top Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">Tools <span>Paradise</span></div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Powerful Tools. <br><span>Zero Distractions.</span></h1>
+        <p>A curated collection of lightweight utilities for creators and developers.</p>
+        
+        <div class="hero-search">
+            <div class="search-box">
+                <input type="text" id="toolSearch" placeholder="Search 9+ tools...">
+                <kbd class="search-hint">⌘K</kbd>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero-stats">
+            <div class="stat-item"><strong>9</strong> Tools</div>
+            <div class="stat-item"><strong>100%</strong> Free</div>
+            <div class="stat-item"><strong>★ 4.9</strong> Rating</div>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="filter-group">
+            <button class="filter-btn active" data-category="all">All Tools</button>
+            <button class="filter-btn" data-category="Productivity">Productivity</button>
+            <button class="filter-btn" data-category="Finance">Finance</button>
+            <button class="filter-btn" data-category="Creative">Creative</button>
+            <button class="filter-btn" data-category="Utility">Utility</button>
+        </div>
+    </section>
+
+    <!-- Main Grid -->
+    <main id="tools-grid">
+
+        <!-- 1. Zen Pen -->
+        <article class="tool-card" data-category="Productivity">
+            <div class="card-media">
+                <img src="./img/Notes.jpg" alt="Zen Pen">
+                <span class="badge">Productivity</span>
+            </div>
+            <div class="card-body">
+                <h3>Zen Pen</h3>
+                <p>Minimal writing tool for distraction-free focus.</p>
+                <div class="card-footer">
+                    <a href="./tools/21 y/tholman-zenpen-b39f57b/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. Expense Tracker -->
+        <article class="tool-card" data-category="Finance">
+            <div class="card-media">
+                <img src="./img/expense.jpeg" alt="Expense Tracker">
+                <span class="badge">Finance</span>
+            </div>
+            <div class="card-body">
+                <h3>Expense Tracker</h3>
+                <p>Track your daily spending and manage budgets easily.</p>
+                <div class="card-footer">
+                    <a href="./tools/4 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3. Password Generator -->
+        <article class="tool-card" data-category="Utility">
+            <div class="card-media">
+                <img src="./img/Password Manager.jpg" alt="Password Generator">
+                <span class="badge">Utility</span>
+            </div>
+            <div class="card-body">
+                <h3>Password Generator</h3>
+                <p>Create strong and secure passwords instantly.</p>
+                <div class="card-footer">
+                    <a href="./tools/8 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. Lyrics Search -->
+        <article class="tool-card" data-category="Creative">
+            <div class="card-media">
+                <img src="./img/lyrics.jpg" alt="Lyrics Search">
+                <span class="badge">Creative</span>
+            </div>
+            <div class="card-body">
+                <h3>Lyrics Search</h3>
+                <p>Find lyrics to your favorite songs in seconds.</p>
+                <div class="card-footer">
+                    <a href="./tools/13 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. Drawing Board -->
+        <article class="tool-card" data-category="Creative">
+            <div class="card-media">
+                <img src="./img/paintin.jpg" alt="Drawing Board">
+                <span class="badge">Creative</span>
+            </div>
+            <div class="card-body">
+                <h3>Drawing Board</h3>
+                <p>Sketch and draw directly in your web browser.</p>
+                <div class="card-footer">
+                    <a href="./tools/15 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. Location Finder -->
+        <article class="tool-card" data-category="Utility">
+            <div class="card-media">
+                <img src="./img/Location.jpg" alt="Location Finder">
+                <span class="badge">Utility</span>
+            </div>
+            <div class="card-body">
+                <h3>Location Finder</h3>
+                <p>Discover and locate places with pinpoint accuracy.</p>
+                <div class="card-footer">
+                    <a href="./tools/16 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 7. Meme Generator -->
+        <article class="tool-card" data-category="Creative">
+            <div class="card-media">
+                <img src="./img/mm.png" alt="Meme Generator">
+                <span class="badge">Creative</span>
+            </div>
+            <div class="card-body">
+                <h3>Meme Generator</h3>
+                <p>Create and share funny memes instantly.</p>
+                <div class="card-footer">
+                    <a href="./tools/18 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 8. Image Editor -->
+        <article class="tool-card" data-category="Creative">
+            <div class="card-media">
+                <img src="./img/editor.jpg" alt="Image Editor">
+                <span class="badge">Creative</span>
+            </div>
+            <div class="card-body">
+                <h3>Image Editor</h3>
+                <p>Edit and convert images quickly online.</p>
+                <div class="card-footer">
+                    <a href="./tools/19 y/renzhezhilu-webp2jpg-online-4949141/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- 9. Customer Satisfaction -->
+        <article class="tool-card" data-category="Utility">
+            <div class="card-media">
+                <img src="https://unsplash.com" alt="Customer Satisfaction">
+                <span class="badge">Utility</span>
+            </div>
+            <div class="card-body">
+                <h3>Customer Feedback</h3>
+                <p>Measure satisfaction and improve your services.</p>
+                <div class="card-footer">
+                    <a href="./tools/11 y/index.html" class="launch-link">Open Tool →</a>
+                    <button class="fav-heart">♥</button>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Newsletter / CTA -->
+    <section class="newsletter">
+        <div class="newsletter-card">
+            <h3>Get info on new tools in your inbox</h3>
+            <p>We add new tools every month. Stay updated!</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>Tools Paradise</h4>
+                <p>Making daily digital tasks easier, one tool at a time.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tools Paradise. Built for the community.</p>
+        </div>
+    </footer>
+<script>
+    // 1. DOM Elements
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const toolSearch = document.getElementById('toolSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const toolCards = document.querySelectorAll('.tool-card');
+    const favHearts = document.querySelectorAll('.fav-heart');
+
+    // 2. Theme Management (Dark/Light)
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        themeToggle.querySelector('.theme-icon').innerText = theme === 'light' ? '🌙' : '☀️';
+    }
+
+    // 3. Live Search & Filtering System
+    function updateGallery() {
+        const searchTerm = toolSearch.value.toLowerCase();
+        const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+
+        toolCards.forEach(card => {
+            const title = card.querySelector('h3').innerText.toLowerCase();
+            const category = card.dataset.category;
+            
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+            if (matchesSearch && matchesCategory) {
+                card.style.display = "flex";
+                // Small timeout for a fade-in effect
+                setTimeout(() => card.style.opacity = "1", 10);
+            } else {
+                card.style.display = "none";
+                card.style.opacity = "0";
+            }
+        });
+    }
+
+    // Search Input Event
+    toolSearch.addEventListener('input', updateGallery);
+
+    // Category Button Events
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            updateGallery();
+        });
+    });
+
+    // 4. Favorites System (Persistent)
+    favHearts.forEach((heart, index) => {
+        // Load favorites from local storage
+        if (localStorage.getItem(`fav-${index}`) === 'active') {
+            heart.classList.add('active');
+        }
+
+        heart.addEventListener('click', () => {
+            const isActive = heart.classList.toggle('active');
+            localStorage.setItem(`fav-${index}`, isActive ? 'active' : 'inactive');
+            
+            // Optional: Subtle bounce animation on click
+            heart.style.transform = "scale(1.4)";
+            setTimeout(() => heart.style.transform = "scale(1)", 200);
+        });
+    });
+
+    // 5. Keyboard Shortcut (⌘K or Ctrl+K to focus search)
+    window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            toolSearch.focus();
+        }
+    });
+
+    // 6. Form Submission (Simulated)
+    const subscribeForm = document.querySelector('.subscribe-form');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = subscribeForm.querySelector('button');
+            const input = subscribeForm.querySelector('input');
+            
+            btn.innerText = "Subscribed!";
+            btn.style.background = "#22c55e";
+            input.value = "";
+            
+            setTimeout(() => {
+                btn.innerText = "Subscribe";
+                btn.style.background = "";
+            }, 3000);
+        });
+    }
+</script>
+
+</body>
+</html>

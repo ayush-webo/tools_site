@@ -1,0 +1,158 @@
+/* 1. Variables & Theme Management */
+:root {
+    --bg: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --primary: #ff5e00;
+    --primary-glow: rgba(255, 94, 0, 0.2);
+    --accent: #3b82f6;
+    --border: rgba(0, 0, 0, 0.05);
+    --glass-blur: blur(12px);
+}
+
+[data-theme="dark"] {
+    --bg: #0b0f1a;
+    --card-bg: rgba(30, 41, 59, 0.6);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --primary: #ff8c42;
+}
+
+/* 2. Global Reset */
+* { box-sizing: border-box; transition: all 0.3s ease; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* 3. Animated Aurora Background */
+.aurora-container {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+    opacity: 0.6;
+}
+
+.blob {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    animation: move 25s infinite alternate;
+}
+
+.blob-1 { background: var(--primary); top: -10%; left: -10%; }
+.blob-2 { background: var(--accent); bottom: -10%; right: -10%; animation-delay: -5s; }
+.blob-3 { background: #8b5cf6; top: 40%; left: 30%; animation-duration: 30s; }
+
+@keyframes move {
+    from { transform: translate(0, 0) rotate(0deg); }
+    to { transform: translate(15%, 15%) rotate(180deg); }
+}
+
+/* 4. Navbar & Branding */
+.navbar {
+    padding: 20px 5%;
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+}
+
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+.brand span { color: var(--primary); }
+
+.icon-btn {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 10px; border-radius: 12px; cursor: pointer; font-size: 1.2rem;
+}
+
+/* 5. Hero & Search */
+.hero { text-align: center; padding: 80px 20px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin: 0; }
+.hero h1 span { background: linear-gradient(90deg, var(--primary), #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.search-box {
+    max-width: 600px; margin: 40px auto; position: relative;
+}
+
+#toolSearch {
+    width: 100%; padding: 20px 30px; border-radius: 20px;
+    border: 1px solid var(--border); background: var(--card-bg);
+    backdrop-filter: var(--glass-blur); color: var(--text-main); font-size: 1.1rem;
+}
+
+.hero-stats { display: flex; justify-content: center; gap: 30px; margin-top: 40px; color: var(--text-muted); }
+.hero-stats strong { color: var(--primary); font-size: 1.2rem; }
+
+/* 6. Tool Grid & Cards */
+#tools-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px; padding: 0 5% 100px; max-width: 1400px; margin: auto;
+}
+
+.tool-card {
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border);
+    border-radius: 30px; overflow: hidden;
+    display: flex; flex-direction: column;
+}
+
+.tool-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px var(--primary-glow); }
+
+.card-media { position: relative; height: 200px; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.badge {
+    position: absolute; top: 20px; left: 20px; 
+    background: rgba(0,0,0,0.6); color: white; padding: 5px 15px; 
+    border-radius: 50px; font-size: 0.75rem; font-weight: 600; backdrop-filter: blur(4px);
+}
+
+.card-body { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-body h3 { margin: 0 0 10px; font-size: 1.4rem; }
+.card-body p { color: var(--text-muted); margin-bottom: 25px; line-height: 1.5; }
+
+.card-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+.launch-link { text-decoration: none; font-weight: 700; color: var(--primary); }
+
+.fav-heart {
+    background: transparent; border: none; font-size: 1.5rem; color: #cbd5e1; cursor: pointer;
+}
+.fav-heart.active { color: #ef4444; }
+
+/* 7. Filters & Buttons */
+.filters { display: flex; justify-content: center; margin-bottom: 50px; }
+.filter-group { background: var(--card-bg); padding: 8px; border-radius: 50px; border: 1px solid var(--border); }
+.filter-btn {
+    padding: 10px 25px; border: none; background: transparent; 
+    color: var(--text-muted); font-weight: 600; cursor: pointer; border-radius: 50px;
+}
+.filter-btn.active { background: var(--primary); color: white; }
+
+/* 8. Newsletter Section */
+.newsletter { padding: 100px 5%; }
+.newsletter-card {
+    max-width: 800px; margin: auto; padding: 60px;
+    background: linear-gradient(135deg, var(--primary), #f59e0b);
+    border-radius: 40px; color: white; text-align: center;
+}
+.subscribe-form { display: flex; gap: 10px; margin-top: 30px; justify-content: center; }
+.subscribe-form input { padding: 15px 25px; border-radius: 15px; border: none; width: 60%; }
+.subscribe-form button { padding: 15px 30px; border-radius: 15px; border: none; background: #0f172a; color: white; font-weight: 700; cursor: pointer; }
+
+/* 9. Footer */
+.main-footer { background: #0f172a; color: #94a3b8; padding: 80px 5% 40px; border-radius: 50px 50px 0 0; }
+.footer-grid { display: flex; justify-content: space-between; margin-bottom: 40px; }
+.footer-info h4 { color: white; font-size: 1.5rem; margin-bottom: 10px; }
+.footer-links a { color: #94a3b8; text-decoration: none; margin-left: 20px; }
+.footer-links a:hover { color: var(--primary); }
